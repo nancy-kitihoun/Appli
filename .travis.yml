@@ -1,0 +1,36 @@
+dist: xenial
+sudo: false
+latex: true
+language: r
+r: release
+
+warnings_are_errors: false
+
+cache:
+  packages: true
+  
+apt_packages:
+  - libgdal-dev
+  - libudunits2-dev
+  
+r_packages:
+ - rsconnect
+ - shiny
+ - e1071
+ - gbm
+ - randomForest
+ - class
+ - shinydashboard
+ - DT
+ - reshape
+ - funModeling
+ - GGally
+ - dplyr
+ - datasets
+ - ggplot2
+ - tree
+ - caret
+ - parallelSVM
+ 
+ script:
+   - R -f Deploy.R
