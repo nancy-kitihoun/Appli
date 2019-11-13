@@ -168,8 +168,15 @@ dashboardPage(title = "Détection des fraudes sur les cartes de crédits",
                                      ),
                                      tabPanel("gradient boosting",
                                               box(width = 6, plotOutput("gradient"),status = "primary", title="gradient boosting"),
-                                              box(width = 6, verbatimTextOutput("perfgradient" ),status = "primary")
+                                              box(width = 6, verbatimTextOutput("perfgradient" ),status = "primary"),
+                                     
                                               
+                                              tabPanel("Comparaison",
+                                                       
+                                                       plotOutput("Plotcompare")      
+                                              
+                                              
+                                                       
                                      )))
                       
                       
