@@ -210,13 +210,7 @@ shinyServer(function(input, output,session) {
     
     output$gradient=renderPrint(summary(boost()))
     
-    output$Plotcompare=renderPlot(
-      
-      lroc.rf  <- lroc(RF, add = F, lwd = 2, line.col = "black"),
-      lroc.gb <- lroc(GB, add = T, lwd = 2, line.col = "red"),
-      lroc.log <- lroc(lg, add = T, lwd = 2, line.col = "green"),
-      
-      legend("Comparaison", lwd = 2, lty = 1, col = 1:2, c("lwt","full"))  
+ 
       
       
     )

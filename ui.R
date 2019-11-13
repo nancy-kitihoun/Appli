@@ -171,9 +171,7 @@ dashboardPage(title = "Détection des fraudes sur les cartes de crédits",
                                               box(width = 6, verbatimTextOutput("perfgradient" ),status = "primary"),
                                      
                                               
-                                              tabPanel("Comparaison",
-                                                       
-                                                       plotOutput("Plotcompare")      
+                                                
                                               
                                               
                                                        
