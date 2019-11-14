@@ -33,4 +33,4 @@ r_packages:
  - parallelSVM
  
  script:
-   - R -f Deploy.R
+   - R -f deploy.R
