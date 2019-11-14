@@ -105,79 +105,13 @@ dashboardPage(title = "Détection des fraudes sur les cartes de crédits",
                                               box(width = 12, status = "primary",
                                                   title = "detection de fraude sur des cartes bancaires", 
                                                   DT::dataTableOutput("dataTable")
-                                              ),
-                                              box(width = 6,status = "warning", 
-                                                  title=" simple statistique descriptive",
-                                                  DT::dataTableOutput("Des1")),
-                                              box(width = 6,status = "info",
-                                                  "le nombre de valeurs nulles (q_zeros) et son pourcentage (p_zeros)",br(),
-                                                  "le nombre de valeurs manquantes (q_na) et son pourcentage (p_na)",br(),
-                                                  "le nombre de valeur infinies (q_inf) et son pourcentage (p_inf)",br(),
-                                                  
-                                                  DT::dataTableOutput("Des2"))),
-                                     tabPanel("Description2",
-                                              
-                                              
-                                              box(with=12 , status = "warning",
-                                                  
-                                                  sidebarLayout(
-                                                      sidebarPanel(
-                                                          #Definition 1er menu deroulant
-                                                          selectInput("variable1", "Variable (axe des x):",
-                                                                      list("Time" , "V1" ,"V2", "V3" ,"V4" , "V5" ,"V6","V7" ,"V8" ,
-                                                                           "V9","V10","V11" , "V12","V13","V14"  , 
-                                                                           "V15", "V16"   , "V17"   , "V18" ,   "V19"  ,  "V20"  ,  "V21"  ,  
-                                                                           "V22", "V23", "V24", "V25" , "V26", "V27"  ,  "V28" , "Amount" )),
-                                                          
-                                                          #Definition du second menu deroulant
-                                                          selectInput("variable2", "Variable (axe des y):",
-                                                                      list( "V1" ,"V2", "V3" ,"V4" , "V5" ,"V6","V7" ,"V8" ,
-                                                                            "V9","V10","V11" , "V12","V13","V14"  , 
-                                                                            "V15", "V16"   , "V17"   , "V18" ,   "V19"  ,  "V20"  ,  "V21"  ,  
-                                                                            "V22", "V23", "V24", "V25" , "V26", "V27"  ,  "V28" , "Amount","Time"))),
-                                                      
-                                                      mainPanel(  plotOutput("Grap1", height = "300px")))),
-                                              box( status = "info",  plotOutput("Grap2", height = "300px")),
-                                              box( title="CorrÃ©lation", plotOutput("tabCor") ,status = "primary")
-                                     ),
-                                     tabPanel("Un Tout",status = "info",width = 24,
-                                              plotOutput("Grap3", width = "100%" ))
+                                              )
+                                     )
+                              )
+                      )
+                  )
+              )
+)
                                      
-                              )),
-                      # Analyse
-                      tabItem(tabName="analysis",
-                              style = "overflow-y:scroll;",
-                              sliderInput("proportion ", "proportion 0", min=0.001, max=0.005, value=0.003,
-                                          width = '95%'),
-                              
-                              tabBox(type = "pills",selected = "SVM",width = 12,
-                                     
-                                     tabPanel("SVM", 
-                                              
-                                              box(width = 6, verbatimTextOutput("svm"),status = "primary", title="sortie svm"),
-                                              box(width=6,verbatimTextOutput("performence"),status = "primary",title="matrice de confusion")
-                                              #box(plotOutput("ROC", height = "300px" ),status = "primary",title="courbe AUC")
-                                              
-                                              
-                                     ),
-                                     tabPanel("Abre de classification",
-                                              box(width = 6, verbatimTextOutput("tree"),status = "primary", title="sortie tree"),
-                                              box(width = 6, plotOutput("abre", height = "300px" ),status = "primary"),
-                                              box(width = 6, plotOutput("tre_roc", height = "300px" ),status = "primary")
-                                              
-                                     ),
-                                     tabPanel("gradient boosting",
-                                              box(width = 6, plotOutput("gradient"),status = "primary", title="gradient boosting"),
-                                              box(width = 6, verbatimTextOutput("perfgradient" ),status = "primary"),
-                                     
-                                              
-                                                
-                                              
-                                              
-                                                       
-                                     )))
-                      
-                      
-                      
-                      
-                  )))
+                                            
+                                             
